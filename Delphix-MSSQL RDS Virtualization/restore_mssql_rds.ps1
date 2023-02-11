@@ -1,4 +1,8 @@
-﻿# Define the variables for the SQL Server instance, SQL authentication credentials, SQL command, and log file
+
+###########################################################################################################################################
+######################### Author: Jatinder Luthra
+### Date: 02-10-2023
+###########################################################################################################################################
 
 $dbName = "bikestores_stg"
 $backupFile = "D:\rdsdbdata\BACKUP\s3_backups\bikestores_diff.bak"
