@@ -46,18 +46,8 @@ fi
 # pre-req
 # aws cli v2
 # jq
-# list rds instance state
-# aws rds describe-db-instances --db-instance-identifier jl-crds-orcltgt --query 'DBInstances[*].[DBInstanceIdentifier,DBInstanceStatus]'
-# pause custom rds instance
-# aws rds modify-db-instance --db-instance-identifier jl-crds-orcltgt --automation-mode all-paused --resume-full-automation-mode-minutes 60
-# resume automation
-# aws rds modify-db-instance --db-instance-identifier jl-crds-orcltgt --automation-mode full
 
 
-#crds_inst="jl-crds-orclstg"
-#aws_region="us-east-1"
-#automation_action="pause" # resume/pause
-#pause_time_in_mins="60"
 curr_datetime=$(date -u +"%Y%m%d%H%M%s")
 
 echo "#### get RDS Custom Instance, $crds_inst Status ####"
