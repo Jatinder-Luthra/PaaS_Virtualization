@@ -1,15 +1,15 @@
 ﻿# Define the variables for the SQL Server instance, SQL authentication credentials, SQL command, and log file
 ################## Encrypt password START ##################
 ###### $File = "C:\Users\Administrator\Desktop\Scripts\RDS_Credentials\rds_password.txt"
-###### $Password = "ContinuousData1!" | ConvertTo-SecureString -AsPlainText -Force
+###### $Password = "Password" | ConvertTo-SecureString -AsPlainText -Force
 ###### $Password | ConvertFrom-SecureString | Out-File $File
 ################## Encrypt password END ##################
 
 
-$RDSInstance = "jl-rds-mssql-src.cdsvgllsbibq.us-east-1.rds.amazonaws.com"
-$RDSUsername = "jladmin"
+$RDSInstance = "<RDSInstanceEndpoint>"
+$RDSUsername = "<RDSInstUsername>"
 $dbName = "bikestores"
-$backupFile = "arn:aws:s3:::jl-s3-buck/mssql_rds_backups/bikestores_diff.bak"
+$backupFile = "arn:aws:s3:::<bucketName>/<bucketPrefix>/bikestores_diff.bak"
 $RDSPasswordFile = "C:\Users\Administrator\Desktop\Scripts\RDS_Credentials\rds_password.txt"
 
 $sqlCommand = "exec msdb.dbo.rds_backup_database @source_db_name='$dbName', @s3_arn_to_backup_to='$backupFile',    
