@@ -1,9 +1,13 @@
 ﻿# Define the variables for the SQL Server instance, SQL authentication credentials, SQL command, and log file
+ ###########################################################################################################################################
+######################### Author: Jatinder Luthra
+### Date: 02-10-2023
 ################## Encrypt password START ##################
 ###### $File = "C:\Users\Administrator\Desktop\Scripts\RDS_Credentials\rds_password.txt"
 ###### $Password = "Password" | ConvertTo-SecureString -AsPlainText -Force
 ###### $Password | ConvertFrom-SecureString | Out-File $File
 ################## Encrypt password END ##################
+ ###########################################################################################################################################
 
 
 $RDSInstance = "<RDSInstanceEndpoint>"
